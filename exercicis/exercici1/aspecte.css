@@ -1,0 +1,73 @@
+/* això és un comentari en css */
+/* a tots els elements de tipus link (a) se'ls aplicarà el que hi ha
+dins el parèntesis
+en aquest cas es posaran en color cyan */
+body {
+    background-color: rgb(0, 10, 56);    
+}
+section{
+    text-align: center;
+}
+a {
+color:cyan;
+text-decoration: none;
+}
+a:hover{
+    text-decoration:underline;
+}
+/* com referenciar a un identificador */
+#tit {
+color: rgb(255, 0, 102);
+}
+/* podem fer que els elements li tinguin un determinat color, marge
+exterior i interior (margin i padding)*/
+article.casalloguer {
+background-color: rgb(0, 11, 114);
+color: white;
+border: 2px solid rgb(0, 25, 165);
+margin: 5px;
+padding: 5px;
+display: inline-block;
+width: 30%;
+text-align: center;
+}
+
+#menu-principal{
+background-color: rgb(0, 20, 202);
+color: rgb(255, 255, 255);
+border: 2px solid rgb(0, 64, 99);
+margin: 20px;
+padding: 20px;
+text-align: center;
+}
+#menu-principal a{
+    color: cyan;
+    text-decoration:none;
+    margin: 100px;
+}   
+#menu-principal a:hover{
+    text-decoration:underline;
+}   
+#contacte{
+background-color: rgb(0, 20, 202);
+color: rgb(255, 255, 255);
+border: 2px solid rgb(0, 64, 99);
+margin: 20px;
+clear: both;
+padding: 20px;
+}
+#missatge input{
+    width: 94%;
+    height: 100px;
+    margin: 20px;
+    padding: 20px;
+    display:block;
+}
+ul, li {
+padding: 0,0;
+margin: 2px ,2px;
+display: inline-block;
+}
+footer{
+    color:white;
+}

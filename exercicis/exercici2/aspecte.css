@@ -1,0 +1,40 @@
+a {
+    text-decoration: none;
+}
+a:hover{
+    text-decoration:underline;
+}
+.principal {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+}
+.fotos {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+}
+.grup {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.videos {
+    display: flex;
+    justify-content: space-between;
+}
+body {
+    justify-content: center;
+}
+table {
+    border-collapse: collapse;
+    width:100%;
+}
+td, th {
+    border: 1px solid black;
+    text-align: left;
+    padding: 8px;
+}
+li {
+    list-style:decimal
+}
