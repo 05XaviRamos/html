@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ca">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Rick & Morty</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #121212;
+        color: #eee;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        margin: 0;
+        min-height: 100vh;
+      }
+
+      h1 {
+        color: #51ff00;
+        margin-bottom: 20px;
+      }
+
+      #image {
+        max-width: 250px;
+        border-radius: 10px;
+        margin-bottom: 15px;
+      }
+
+      #fet {
+        background-color: #222;
+        padding: 10px;
+        border-radius: 8px;
+        min-width: 280px;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      #nom {
+        padding: 8px;
+        border-radius: 6px;
+        border: 1px solid #51ff00;
+        width: 200px;
+        margin-right: 10px;
+      }
+
+      button {
+        background-color: #51ff00;
+        border: none;
+        padding: 8px 14px;
+        border-radius: 6px;
+        color: #121212;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #2d8f00;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Rick & Morty</h1>
+    <img src="" id="image">
+    <p id="fet"></p>
+    <input type="text" id="nom">
+    <button onclick="femfetch()">Buscar</button>
+
+
+    <script>
+    
+      function femfetch()
+        {
+       	let nom = document.getElementById("nom").value;
+        fetch("https://rickandmortyapi.com/api/character/?name="+nom)
+          .then((res) => res.json())
+          .then((data) => {
+          	document.getElementById("image").src = data.results[0].image;
+            document.getElementById("fet").textContent = "";
+            document.getElementById("fet").textContent += " | " + data.results[0].name;
+            document.getElementById("fet").textContent += " | " + data.results[0].species;
+            document.getElementById("fet").textContent += " | " + data.results[0].gender;
+            document.getElementById("fet").textContent += " | " + data.results[0].origin.name + " |";
+          });
+        }
+        
+    </script>
+  </body>
+</html>

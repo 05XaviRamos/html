@@ -25,13 +25,16 @@ a:hover{
 }
 body {
     justify-content: center;
+    background-color: black;
+    color: white;
 }
 table {
     border-collapse: collapse;
     width:100%;
 }
 td, th {
-    border: 1px solid black;
+    color: white;
+    border: 1px solid white;
     text-align: left;
     padding: 8px;
 }

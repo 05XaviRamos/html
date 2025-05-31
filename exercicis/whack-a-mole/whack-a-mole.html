@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<body>
+<style>
+    body{
+        background-color: greenyellow;
+    }
+    .fila{
+        text-align: center;
+    }
+    #punts{
+        size: 1vw;
+    }
+</style>
+<section class="graella">
+    <div class="fila">
+        <img id="mole1" src="imatges/topoNo.jpg" onclick="cop(this)" width="15%">
+        <img id="mole2" src="imatges/topoNo.jpg" onclick="cop(this)" width="15%">
+        <img id="mole3" src="imatges/topoNo.jpg" onclick="cop(this)" width="15%">
+    </div>
+    <div class="fila">
+        <img id="mole4" src="imatges/topoNo.jpg" onclick="cop(this)" width="15%">
+        <img id="mole5" src="imatges/topoNo.jpg" onclick="cop(this)" width="15%">
+        <img id="mole6" src="imatges/topoNo.jpg" onclick="cop(this)" width="15%">
+    </div>
+    <div class="fila">
+        <img id="mole7" src="imatges/topoNo.jpg" onclick="cop(this)" width="15%">
+        <img id="mole8" src="imatges/topoNo.jpg" onclick="cop(this)" width="15%">
+        <img id="mole9" src="imatges/topoNo.jpg" onclick="cop(this)" width="15%">
+    </div>
+</section>
+
+<p id="punts">0 punts</p>
+<script>
+    let punts = 0;
+    setInterval(mostrarTalp, 900);
+    function mostrarTalp() { 
+        let aleatori = Math.floor(Math.random() * 9) + 1;   
+        switch (aleatori){
+            case 1:
+                document.getElementById("mole1").src="imatges/topoSi.jpg";
+                break;
+            case 2:
+                document.getElementById("mole2").src="imatges/topoSi.jpg";
+                break;
+            case 3:
+                document.getElementById("mole3").src="imatges/topoSi.jpg";
+                break;
+            case 4:
+                document.getElementById("mole4").src="imatges/topoSi.jpg";
+                break;
+            case 5:
+                document.getElementById("mole5").src="imatges/topoSi.jpg";
+                break;
+            case 6:
+                document.getElementById("mole6").src="imatges/topoSi.jpg";
+                break;
+            case 7:
+                document.getElementById("mole7").src="imatges/topoSi.jpg";
+                break;
+            case 8:
+                document.getElementById("mole8").src="imatges/topoSi.jpg";
+                break;
+            case 9:
+                document.getElementById("mole9").src="imatges/topoSi.jpg";
+                break;
+            default:
+                alert("Error");
+                break;
+        }
+        setTimeout(amaga, 800)
+    }
+
+    function amaga(){
+        document.getElementById("mole1").src="imatges/topoNo.jpg";
+        document.getElementById("mole2").src="imatges/topoNo.jpg";
+        document.getElementById("mole3").src="imatges/topoNo.jpg";
+        document.getElementById("mole4").src="imatges/topoNo.jpg";
+        document.getElementById("mole5").src="imatges/topoNo.jpg";
+        document.getElementById("mole6").src="imatges/topoNo.jpg";
+        document.getElementById("mole7").src="imatges/topoNo.jpg";
+        document.getElementById("mole8").src="imatges/topoNo.jpg";
+        document.getElementById("mole9").src="imatges/topoNo.jpg";
+    }
+
+    function cop(x){
+        if (x.src.includes("imatges/topoSi.jpg")){
+            punts++;
+            var audio = new Audio('imatges/boing.mp3');
+            audio.play();
+        } else {
+            punts--;
+        }
+        document.getElementById("punts").innerHTML= punts + " punts";
+        x.src="imatges/topoPam.jpg";
+    }
+</script>
+</body>
+</html>

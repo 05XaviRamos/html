@@ -1,0 +1,96 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header p {
+    font-size: 1.1em;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.gallery {
+    padding: 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Crea 5 columnes iguals */
+    grid-gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.image-container {
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+}
+
+.image-container:hover img {
+    transform: scale(1.25);
+}
+
+#p1 {
+    grid-column: span 2; /* Ocupa 2 columnes */
+}
+
+#p2 {
+    grid-column: span 1; /* Ocupa 1 columna */
+}
+
+#p3 {
+    grid-column: span 2; /* Ocupa 2 columnes */
+}
+
+#p4 {
+    grid-column: span 2; /* Ocupa 3 columnes */
+}
+
+#p5 {
+    grid-column: span 1; /* Ocupa 1 columna */
+}
+
+#p6 {
+    grid-column: span 2; /* Ocupa 1 columna */
+}
+
+#p7 {
+    grid-column: span 2; /* Ocupa 2 columnes */
+}
+
+#p8 {
+    grid-column: span 1; /* Ocupa 1 columna */
+}
+
+#p9 {
+    grid-column: span 2; /* Ocupa 3 columnes */
+}
+
+#p10 {
+    grid-column: span 2; /* Ocupa 1 columna */
+}
+
+footer {
+    background-color: black;
+    color: white;
+}

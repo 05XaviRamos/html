@@ -1,0 +1,104 @@
+/* Estils globals */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Capçalera */
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header p {
+    font-size: 1.1em;
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: justify;
+}
+
+/* Descripció */
+.description {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Columnes per al text */
+.text-info {
+    column-count: 2; /* Dues columnes per a dispositius més grans */
+    column-gap: 20px; /* Espai entre columnes */
+}
+
+/* Estils per la secció d'imatges 360º */
+.video360 {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.video360 iframe {
+    border: none;
+}
+.imatges div img {
+    display: flex;
+    align-items: center;
+}
+/* Media Queries per a mòbil petit (<576px) */
+@media (max-width: 576px) {
+    /* Columnes de text en mòbils petits */
+    .text-info {
+        column-count: 1; /* 1 columna per a mòbils petits */
+    }
+
+    /* Ajustem la mida de la capçalera per a dispositius petits */
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+}
+
+/* Media Queries per a tauletes (576px a 992px) */
+@media (min-width: 576px) and (max-width: 992px) {
+    /* Columnes de text per a tauletes */
+    .text-info {
+        column-count: 2; /* 2 columnes per a tauletes */
+    }
+
+    /* Ajustem la mida de la capçalera per a dispositius de mida mitjana */
+    header h1 {
+        font-size: 2.2em;
+    }
+
+    header p {
+        font-size: 1.1em;
+    }
+}
+
+/* Media Queries per a pantalles d'ordinador (>992px) */
+@media (min-width: 992px) {
+    /* Columnes de text per a pantalles grans */
+    .text-info {
+        column-count: 2; /* 2 columnes per a pantalles d'ordinador */
+    }
+
+    /* Ajustem la mida de la capçalera per a pantalles grans */
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    header p {
+        font-size: 1.2em;
+    }
+}
